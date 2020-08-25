@@ -6,6 +6,11 @@ std::list<GameObject*> ObjectManager::objectList = std::list<GameObject*>();
 
 void ObjectManager::Update()
 {
+	if (Camera::shake.x > 1)
+		Camera::shake.x--;
+	if (Camera::shake.y > 1)
+		Camera::shake.y--;
+
 	std::list<GameObject*>::iterator it = objectList.begin();
 
 	while (it != objectList.end())
