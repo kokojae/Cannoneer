@@ -12,6 +12,24 @@
       <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
       <Extensions>fx;fxh;hlsl</Extensions>
     </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{90c301aa-1d78-460d-a69b-ec8400ce9738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{7509fb91-3306-4a85-847f-06f8eb7de5bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{df7f4523-c9e7-45b5-ba36-e2a7164279fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Base">
+      <UniqueIdentifier>{ecb8d243-9279-483d-92dc-b6c398fc7977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Text">
+      <UniqueIdentifier>{0aeb7e20-4a03-4047-afbd-c1dbccd4b2d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Text\Base">
+      <UniqueIdentifier>{49a31e00-9b4d-404b-9f84-08e4aa807c47}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -73,21 +91,99 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cannoneer.cpp" />
     <ClCompile Include="DXUT\Optional\SDKsound.cpp">
       <Filter>DXUT</Filter>
     </ClCompile>
     <ClCompile Include="DXUT\Optional\SDKwavefile.cpp">
       <Filter>DXUT</Filter>
     </ClCompile>
+    <ClCompile Include="TextureInfo.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Cannoneer.cpp" />
+    <ClCompile Include="Camera.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>GameObject\Text\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cannoneer.h" />
     <ClInclude Include="DXUT\Optional\SDKsound.h">
       <Filter>DXUT</Filter>
     </ClInclude>
     <ClInclude Include="DXUT\Optional\SDKwavefile.h">
       <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureInfo.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Cannoneer.h" />
+    <ClInclude Include="Camera.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>GameObject\Text\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

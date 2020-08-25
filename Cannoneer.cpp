@@ -6,6 +6,7 @@
 #include "DXUT.h"
 #include "resource.h"
 #include "Cannoneer.h"
+#include <windowsx.h>
 
 
 //--------------------------------------------------------------------------------------
@@ -41,6 +42,7 @@ bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* p
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                      void* pUserContext )
 {
+    GameManager::Init();
     return S_OK;
 }
 
@@ -61,6 +63,8 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
+    GameManager::Update();
+    GameManager::LateUpdate();
 }
 
 
@@ -77,6 +81,7 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
     // Render the scene
     if( SUCCEEDED( pd3dDevice->BeginScene() ) )
     {
+        GameManager::Render();
         V( pd3dDevice->EndScene() );
     }
 }
@@ -88,6 +93,29 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
 LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
                           bool* pbNoFurtherProcessing, void* pUserContext )
 {
+    if (uMsg == WM_LBUTTONDOWN)
+        MouseManager::leftBtn = true;
+    if (uMsg == WM_MBUTTONDOWN)
+        MouseManager::leftBtn = true;
+    if (uMsg == WM_RBUTTONDOWN)
+        MouseManager::leftBtn = true;
+
+    if (uMsg == WM_LBUTTONUP)
+        MouseManager::leftBtn = false;
+    if (uMsg == WM_MBUTTONUP)
+        MouseManager::leftBtn = false;
+    if (uMsg == WM_RBUTTONUP)
+        MouseManager::leftBtn = false;
+
+    if (uMsg == WM_MOUSEMOVE)
+    {
+        MouseManager::position = {
+            static_cast<float>(GET_X_LPARAM(lParam)) - SCREEN_WIDTH / 2,
+            static_cast<float>(GET_Y_LPARAM(lParam)) - SCREEN_HEIGHT / 2
+        };
+        MouseManager::position += Camera::position;
+    }
+
     return 0;
 }
 
@@ -105,6 +133,7 @@ void CALLBACK OnD3D9LostDevice( void* pUserContext )
 //--------------------------------------------------------------------------------------
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
+    GameManager::Release();
 }
 
 
