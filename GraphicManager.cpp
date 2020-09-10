@@ -39,6 +39,18 @@ void GraphicManager::Release()
 	font->Release();
 }
 
+void GraphicManager::RotatingTexture(TextureInfo* info, D3DXVECTOR2 direction)
+{
+	info->degree= D3DXToDegree(atan2(direction.y, direction.x));
+
+	if (info->degree <= -90 && info->degree >= -180)
+		info->scale.y = -abs(info->scale.y);
+	if (info->degree >= 90 && info->degree <= 180)
+		info->scale.y = -abs(info->scale.y);
+	if (info->degree > -90 && info->degree < 90)
+		info->scale.y = abs(info->scale.y);
+}
+
 void GraphicManager::TextureRender(TextureInfo info, D3DXVECTOR2 position)
 {
 	D3DXMATRIX mat, center, pos, scale, degree;

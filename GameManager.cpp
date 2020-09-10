@@ -6,7 +6,7 @@ void GameManager::Init()
 {
 	GraphicManager::Init();
 	SoundManager::Init();
-	SceneManager::LoadScene(SceneManager::Scene::TITLE);
+	SceneManager::LoadScene(SceneManager::Scene::STAGE1);
 }
 
 void GameManager::Update()

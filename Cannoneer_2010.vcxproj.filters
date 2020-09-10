@@ -30,6 +30,30 @@
     <Filter Include="GameObject\Text\Base">
       <UniqueIdentifier>{49a31e00-9b4d-404b-9f84-08e4aa807c47}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Bullet">
+      <UniqueIdentifier>{20d66c1f-01ae-41ca-a8ab-cc415c19141a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Bullet\Base">
+      <UniqueIdentifier>{d3510274-f84e-403f-a861-17c26b0c6c61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Stage">
+      <UniqueIdentifier>{419cd6cf-dac3-4aa0-a447-1dd5f9f383d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Character">
+      <UniqueIdentifier>{97537b26-81b8-47d8-906d-b361ec2765b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Weapon">
+      <UniqueIdentifier>{0d9f1431-968c-4746-84ec-2bf77c064999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Weapon\Base">
+      <UniqueIdentifier>{0b4c78f1-79df-4ba4-8a11-4f025c5f605c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Character\Enemy">
+      <UniqueIdentifier>{5c1eef28-008b-4aa4-88af-cd629b215f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Character\Enemy\Base">
+      <UniqueIdentifier>{4579f773-6800-4579-b364-45fcf7846797}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -137,6 +161,30 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>Manager</Filter>
     </ClCompile>
+    <ClCompile Include="BulletBase.cpp">
+      <Filter>GameObject\Bullet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>GameObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="WarningText.cpp">
+      <Filter>GameObject\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>GameObject\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponBase.cpp">
+      <Filter>GameObject\Weapon\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Sniper.cpp">
+      <Filter>GameObject\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBase.cpp">
+      <Filter>GameObject\Character\Enemy\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -184,6 +232,30 @@
     </ClInclude>
     <ClInclude Include="GameManager.h">
       <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletBase.h">
+      <Filter>GameObject\Bullet\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBullet.h">
+      <Filter>GameObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="WarningText.h">
+      <Filter>GameObject\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>GameObject\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponBase.h">
+      <Filter>GameObject\Weapon\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Sniper.h">
+      <Filter>GameObject\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBase.h">
+      <Filter>GameObject\Character\Enemy\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

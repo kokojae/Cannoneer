@@ -2,7 +2,7 @@
 class SceneManager
 {
 public:
-	static enum class Scene { TITLE, RANK_BOARD, STAGE1, STAGE2, RANK_INPUT };
+	static enum class Scene { TITLE, STAGE1, STAGE2, SHOW_RECORD};
 
 	static Scene currentScene;
 

@@ -10,7 +10,21 @@
 
 //GameObject
 #include "GameObject.h"
+
+#include "BulletBase.h"
+#include "PlayerBullet.h"
+
+#include "EnemyBase.h"
+
+#include "Player.h"
+
+#include "BackGround.h"
+
 #include "Text.h"
+#include "WarningText.h"
+
+#include "WeaponBase.h"
+#include "Sniper.h"
 
 //Manager
 #include "Camera.h"

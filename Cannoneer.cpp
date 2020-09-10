@@ -96,16 +96,16 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
     if (uMsg == WM_LBUTTONDOWN)
         MouseManager::leftBtn = true;
     if (uMsg == WM_MBUTTONDOWN)
-        MouseManager::leftBtn = true;
+        MouseManager::middleBtn = true;
     if (uMsg == WM_RBUTTONDOWN)
-        MouseManager::leftBtn = true;
+        MouseManager::rightBtn = true;
 
     if (uMsg == WM_LBUTTONUP)
         MouseManager::leftBtn = false;
     if (uMsg == WM_MBUTTONUP)
-        MouseManager::leftBtn = false;
+        MouseManager::middleBtn = false;
     if (uMsg == WM_RBUTTONUP)
-        MouseManager::leftBtn = false;
+        MouseManager::rightBtn = false;
 
     if (uMsg == WM_MOUSEMOVE)
     {

@@ -11,6 +11,9 @@ public:
 	static void Init();
 	static void Render();
 	static void Release();
+
+	static void RotatingTexture(TextureInfo* info, D3DXVECTOR2 direction);
+
 	static void TextureRender(TextureInfo info, D3DXVECTOR2 position);
 	static void TextRender(std::wstring text, TextureInfo info, D3DXVECTOR2 position);
 	static void OutLineTextRender(std::wstring text, TextureInfo info, D3DXVECTOR2 position);
